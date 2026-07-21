@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barony Build Creator</title>
+    <link rel="stylesheet" href="dist/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="src/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  </head>
+  <body class="bg-zinc-950 text-zinc-100 min-h-screen">
+    <div
+      x-data="buildPlanner()"
+      x-init="init()"
+      x-cloak
+      class="max-w-6xl mx-auto px-4 py-8"
+    >
+      <header class="mb-8 flex items-center justify-between flex-wrap gap-4">
+        <div>
+          <h1 class="text-3xl font-bold tracking-tight">Barony Build Creator</h1>
+          <p class="text-zinc-400 text-sm mt-1">
+            Pick a race and class to see the buffs, debuffs and stats for your build.
+          </p>
+        </div>
+        <div class="flex gap-2">
+          <button
+            @click="shareUrl()"
+            :disabled="!selectedRaceId && !selectedClassId"
+            class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 disabled:bg-zinc-700 disabled:text-zinc-500 disabled:cursor-not-allowed text-sm font-medium transition"
+          >
+            <span x-show="!shareCopied">Copy Share Link</span>
+            <span x-show="shareCopied">Copied!</span>
+          </button>
+          <button
+            @click="reset()"
+            class="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition"
+          >
+            Reset
+          </button>
+        </div>
+      </header>
+
+      <template x-if="!dataLoaded">
+        <p class="text-zinc-400">Loading data…</p>
+      </template>
+
+      <template x-if="dataLoaded">
+        <div class="space-y-10">
+          <!-- Race selection -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Race</h2>
+            <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-3">
+              <template x-for="race in races" :key="race.id">
+                <button
+                  @click="selectRace(race.id)"
+                  class="flex flex-col items-center gap-1 p-2 rounded-lg border-2 transition"
+                  :class="selectedRaceId === race.id ? 'border-emerald-500 bg-emerald-500/10' : 'border-zinc-800 hover:border-zinc-600 bg-zinc-900'"
+                >
+                  <img :src="race.iconLocal" :alt="race.name" class="w-10 h-10 object-contain" loading="lazy" />
+                  <span class="text-xs text-center" x-text="race.name"></span>
+                </button>
+              </template>
+            </div>
+          </section>
+
+          <!-- Class selection -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Class</h2>
+            <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-3">
+              <template x-for="cls in classes" :key="cls.id">
+                <button
+                  @click="selectClass(cls.id)"
+                  class="flex flex-col items-center gap-1 p-2 rounded-lg border-2 transition"
+                  :class="selectedClassId === cls.id ? 'border-emerald-500 bg-emerald-500/10' : 'border-zinc-800 hover:border-zinc-600 bg-zinc-900'"
+                >
+                  <img :src="cls.iconLocal" :alt="cls.name" class="w-10 h-10 object-contain" loading="lazy" />
+                  <span class="text-xs text-center" x-text="cls.name"></span>
+                </button>
+              </template>
+            </div>
+          </section>
+
+          <!-- Summary -->
+          <section class="grid md:grid-cols-3 gap-6">
+            <!-- Stats -->
+            <div class="bg-zinc-900 rounded-xl p-5 border border-zinc-800">
+              <h3 class="text-lg font-semibold mb-3">Stats</h3>
+              <template x-if="!selectedClass && !selectedRace">
+                <p class="text-zinc-500 text-sm">Select a race and class to see stats.</p>
+              </template>
+              <ul class="space-y-1 text-sm" x-show="selectedClass || selectedRace">
+                <template x-for="stat in Object.keys(finalStats)" :key="stat">
+                  <li class="flex justify-between">
+                    <span class="text-zinc-400" x-text="stat"></span>
+                    <span x-text="finalStats[stat]"></span>
+                  </li>
+                </template>
+              </ul>
+            </div>
+
+            <!-- Buffs -->
+            <div class="bg-zinc-900 rounded-xl p-5 border border-zinc-800">
+              <h3 class="text-lg font-semibold mb-3 text-emerald-400">Buffs</h3>
+              <template x-if="combinedBuffs.length === 0">
+                <p class="text-zinc-500 text-sm">Select a race and class to see buffs.</p>
+              </template>
+              <ul class="space-y-1 text-sm list-disc list-inside">
+                <template x-for="(buff, i) in combinedBuffs" :key="i">
+                  <li x-text="buff"></li>
+                </template>
+              </ul>
+            </div>
+
+            <!-- Debuffs -->
+            <div class="bg-zinc-900 rounded-xl p-5 border border-zinc-800">
+              <h3 class="text-lg font-semibold mb-3 text-rose-400">Debuffs</h3>
+              <template x-if="combinedDebuffs.length === 0">
+                <p class="text-zinc-500 text-sm">Select a race and class to see debuffs.</p>
+              </template>
+              <ul class="space-y-1 text-sm list-disc list-inside">
+                <template x-for="(debuff, i) in combinedDebuffs" :key="i">
+                  <li x-text="debuff"></li>
+                </template>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Starting equipment -->
+          <section x-show="selectedClass" class="bg-zinc-900 rounded-xl p-5 border border-zinc-800">
+            <h3 class="text-lg font-semibold mb-3">Starting Equipment</h3>
+            <ul class="space-y-1 text-sm list-disc list-inside">
+              <template x-for="(item, i) in (selectedClass?.startingEquipment || [])" :key="i">
+                <li x-text="item"></li>
+              </template>
+            </ul>
+          </section>
+        </div>
+      </template>
+
+      <footer class="mt-16 text-center text-xs text-zinc-600">
+        Data sourced from
+        <a href="https://barony.wiki.gg" target="_blank" rel="noopener" class="underline hover:text-zinc-400"
+          >barony.wiki.gg</a
+        >. Not affiliated with the Barony developers.
+      </footer>
+    </div>
+  </body>
+</html>

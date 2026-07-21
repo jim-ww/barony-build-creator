@@ -1,0 +1,1338 @@
+{
+  "races": [
+    {
+      "id": "human",
+      "name": "Human",
+      "iconLocal": "assets/icons/races/human.png",
+      "statModifiers": {
+        "STR": 0,
+        "DEX": 0,
+        "CON": 0,
+        "INT": 0,
+        "PER": 0,
+        "CHA": 0
+      },
+      "buffs": [
+        "12.5% faster swimming",
+        "Welcomed by shopkeepers"
+      ],
+      "debuffs": [],
+      "notes": "Baseline, well-rounded race with no combat resistances/weaknesses. Available since the base game; other races were added by later DLCs."
+    },
+    {
+      "id": "skeleton",
+      "name": "Skeleton",
+      "iconLocal": "assets/icons/races/skeleton.png",
+      "statModifiers": {
+        "STR": 0,
+        "DEX": 0,
+        "CON": 0,
+        "INT": 0,
+        "PER": 0,
+        "CHA": 0
+      },
+      "buffs": [
+        "Does not hunger or starve",
+        "Self-resurrects for 75 MP",
+        "Immune to Burning, Strangulation, and Bleed",
+        "Resists Swords 50%, Ranged 50%, Axes 20%, Magic 20%"
+      ],
+      "debuffs": [
+        "HP/MP regeneration reduced 75%",
+        "Swim speed reduced 50%",
+        "Weak to Maces 40%, Polearms 30%, Unarmed 10%, and Smite",
+        "Targeted as hostile by Humans and Shopkeepers"
+      ],
+      "notes": "Requires Myths and Outcasts DLC. Numeric stat modifiers not listed on wiki.",
+      "dlc": "Myths and Outcasts"
+    },
+    {
+      "id": "automaton",
+      "name": "Automaton",
+      "iconLocal": "assets/icons/races/automaton.png",
+      "statModifiers": {
+        "STR": 0,
+        "DEX": 0,
+        "CON": 0,
+        "INT": 0,
+        "PER": 0,
+        "CHA": 0
+      },
+      "buffs": [
+        "Innate Salvage spell (converts items into scrap)",
+        "Boiler-based mana regen instead of food",
+        "Superheated mode boosts heat/regen",
+        "Immune to curses on equipped items",
+        "+20 Tinkering repairs bonus",
+        "Immune to Bleed and Burning",
+        "Resists Ranged and Unarmed 20%",
+        "Friendly with Humans and Shopkeepers"
+      ],
+      "debuffs": [
+        "DEX penalty if Heat drops below 25%",
+        "Weak to Maces 40%, Axes 30%, Magic 20%",
+        "Must fuel boiler with gems/scrolls/books/scrap instead of eating normal food"
+      ],
+      "notes": "Requires Legends and Pariahs DLC. Numeric stat modifiers not listed on wiki.",
+      "dlc": "Legends and Pariahs"
+    },
+    {
+      "id": "dryad",
+      "name": "Dryad",
+      "iconLocal": "assets/icons/races/dryad.png",
+      "statModifiers": {
+        "STR": 0,
+        "DEX": 0,
+        "CON": 0,
+        "INT": 0,
+        "PER": 0,
+        "CHA": 0
+      },
+      "buffs": [
+        "Innate Germinate and Thorns spells",
+        "Grows foliage on level-up (without headwear) for +power/+MP regen up to +30%",
+        "Short form gains 5-10% evasion",
+        "Tall form can see through door windows",
+        "Resists Ranged 30%, Unarmed 20%, Polearms 10%"
+      ],
+      "debuffs": [
+        "Foliage reduces movement speed (-5% to -15% by tier)",
+        "20% reduced CHA growth",
+        "Increasing fire vulnerability by tier (+5% to +15%)",
+        "Weak to Axes 30%, Swords 30%, Magic 10%"
+      ],
+      "notes": "Requires Deserters & Disciples DLC. Numeric stat modifiers not listed on wiki.",
+      "dlc": "Deserters & Disciples"
+    },
+    {
+      "id": "gnome",
+      "name": "Gnome",
+      "iconLocal": "assets/icons/races/gnome.png",
+      "statModifiers": {
+        "STR": 0,
+        "DEX": 0,
+        "CON": 0,
+        "INT": 0,
+        "PER": 0,
+        "CHA": 0
+      },
+      "buffs": [
+        "Innate Forge Jewel spell (turn gems/glass + gold into jewels)",
+        "Improved pickaxe combat (bonus knockback, never degrades, bonus vs breakables)",
+        "Senses gold/gold-item boxes while blind",
+        "Gets 2x gold from breakables",
+        "MP regen bonus scales with hoarded gold",
+        "Welcomed by shopkeepers",
+        "Can recruit allies using forged jewels",
+        "Resists Polearms 10%, Swords 10%"
+      ],
+      "debuffs": [
+        "20% reduced STR growth",
+        "Weak to Magic 10%, Ranged 10%"
+      ],
+      "notes": "Requires Deserters & Disciples DLC.",
+      "dlc": "Deserters & Disciples"
+    },
+    {
+      "id": "goatman",
+      "name": "Goatman",
+      "iconLocal": "assets/icons/races/goatman.png",
+      "statModifiers": {
+        "STR": 0,
+        "DEX": 0,
+        "CON": 0,
+        "INT": 0,
+        "PER": 0,
+        "CHA": 0
+      },
+      "buffs": [
+        "Can eat tins without an opener",
+        "Immune to Greasy status",
+        "May find bonus potions from fountains",
+        "Free Action (immune to sleep/slow/paralysis) while drunk",
+        "-20% damage taken while drunk",
+        "While drunk: STR +4, CON +4, CHA +4, DEX -2, INT -8 (or \u00b125%)",
+        "Can recruit drunk NPCs of other races",
+        "Resists Swords 10%"
+      ],
+      "debuffs": [
+        "Alcoholism causes hangovers",
+        "While hungover: DEX -3, crosshair sway",
+        "Requires regular alcohol consumption",
+        "Weak to Magic 40%, Polearms 10%, Axes 10%, Ranged 10%"
+      ],
+      "notes": "Requires Myths and Outcasts DLC. Stat modifiers are conditional (drunk/hungover), not a flat starting bonus.",
+      "dlc": "Myths and Outcasts"
+    },
+    {
+      "id": "goblin",
+      "name": "Goblin",
+      "iconLocal": "assets/icons/races/goblin.png",
+      "statModifiers": {
+        "STR": 0,
+        "DEX": 0,
+        "CON": 0,
+        "INT": 0,
+        "PER": 0,
+        "CHA": 0
+      },
+      "buffs": [
+        "Worn equipment degrades less often",
+        "Raising any melee weapon skill raises all melee skills",
+        "Spellbooks last twice as long (1/16 vs 1/8 degrade chance)",
+        "Gains 10 XP instead of 2 when melee skills improve",
+        "Resists Unarmed 20%, Swords 10%"
+      ],
+      "debuffs": [
+        "Weapon skills raise slower overall",
+        "Cannot memorize new spells from spellbooks (innate class spells still work)",
+        "Weak to Axes 10%, Polearms 10%, Ranged 10%",
+        "Targeted as hostile by Humans and Shopkeepers"
+      ],
+      "notes": "Requires Legends and Pariahs DLC. Numeric stat modifiers not listed on wiki.",
+      "dlc": "Legends and Pariahs"
+    },
+    {
+      "id": "gremlin",
+      "name": "Gremlin",
+      "iconLocal": "assets/icons/races/gremlin.png",
+      "statModifiers": {
+        "STR": 0,
+        "DEX": 0,
+        "CON": 0,
+        "INT": 0,
+        "PER": 0,
+        "CHA": 0
+      },
+      "buffs": [
+        "Innate Deface spell (destroys sinks, graves, cauldrons, workbenches)",
+        "Vandal stacks (from breaking objects) grant up to Tier 4: +5 melee damage, +20% cast speed, +20% move speed, tripled mana regen every 25s",
+        "20% evasion while Slippery",
+        "Improved sneak vision",
+        "Resists Polearms 20%, Magic 20%, Ranged 10%, Unarmed 10%, Maces 10%"
+      ],
+      "debuffs": [
+        "Cannot see through doors",
+        "20% reduced CON growth",
+        "Weak to Swords 30%, Axes 10%",
+        "Targeted as hostile by Humans and Shopkeepers"
+      ],
+      "notes": "Requires Deserters & Disciples DLC.",
+      "dlc": "Deserters & Disciples"
+    },
+    {
+      "id": "incubus",
+      "name": "Incubus",
+      "iconLocal": "assets/icons/races/incubus.png",
+      "statModifiers": {
+        "STR": 0,
+        "DEX": 0,
+        "CON": 0,
+        "INT": 0,
+        "PER": 0,
+        "CHA": 0
+      },
+      "buffs": [
+        "Innate Teleport and Arcane Mark spells",
+        "Arcane Mark nullifies a marked target's resistances",
+        "Teleport costs half mana and goes behind a marked target",
+        "Cursed equipment gives AC/damage bonuses and is removable",
+        "Can learn spells from cursed spellbooks",
+        "Gains MP from Strangulation",
+        "Resists Polearms 30%, Magic 20%"
+      ],
+      "debuffs": [
+        "Blessed equipment cannot be removed (inverted blessing mechanic)",
+        "Weak to Ranged 30%, Swords 20%, and Smite"
+      ],
+      "notes": "Requires Legends and Pariahs DLC. Male-only; selecting female switches to Succubus (if Myths and Outcasts owned) or Human.",
+      "dlc": "Legends and Pariahs"
+    },
+    {
+      "id": "insectoid",
+      "name": "Insectoid",
+      "iconLocal": "assets/icons/races/insectoid.png",
+      "statModifiers": {
+        "STR": 0,
+        "DEX": 0,
+        "CON": 0,
+        "INT": 0,
+        "PER": 0,
+        "CHA": 0
+      },
+      "buffs": [
+        "Immune to Poison and rotten food",
+        "Innate Flutter (levitation), Dash, and Spray Acid spells",
+        "Uses an Energy (hunger-linked) resource instead of normal mana rules; can eat any food regardless of quality/curse",
+        "Sweet liquids (booze, fruit juice, mana potions) restore bonus Energy",
+        "Hunger declines at 0.67x rate",
+        "Friendly with Insectoids, Scarabs, Scorpions, and Automatons",
+        "Resists Maces 30%, Unarmed 20%"
+      ],
+      "debuffs": [
+        "Weak to Axes 30%, Polearms 30%, Ranged 10%",
+        "Targeted as hostile by Humans and Shopkeepers",
+        {
+          "text": "Energy (the combined hunger/mana resource) drains 3x faster to offset the extra ways of restoring it via blood vials and backstab kills",
+          "onlyWithClass": "accursed"
+        }
+      ],
+      "notes": "Requires Legends and Pariahs DLC.",
+      "dlc": "Legends and Pariahs"
+    },
+    {
+      "id": "myconid",
+      "name": "Myconid",
+      "iconLocal": "assets/icons/races/myconid.png",
+      "statModifiers": {
+        "STR": 0,
+        "DEX": 0,
+        "CON": 0,
+        "INT": 0,
+        "PER": 0,
+        "CHA": 0
+      },
+      "buffs": [
+        "Innate Germinate and Spores spells",
+        "Foliage grants up to 3 AC and poison damage buffs on level-up without headwear",
+        "Eating rotten food grants a chance of MP regen and foliage tier increase",
+        "Welcomed by Shopkeepers"
+      ],
+      "debuffs": [
+        "20% reduced DEX growth",
+        "Foliage lowers movement speed",
+        "Weak to Swords 30%, Axes 10%",
+        "Short form vulnerable to knockback and cannot see through door windows"
+      ],
+      "notes": "Requires Deserters & Disciples DLC.",
+      "dlc": "Deserters & Disciples"
+    },
+    {
+      "id": "salamander",
+      "name": "Salamander",
+      "iconLocal": "assets/icons/races/salamander.png",
+      "statModifiers": {
+        "STR": 0,
+        "DEX": 0,
+        "CON": 0,
+        "INT": 0,
+        "PER": 0,
+        "CHA": 0
+      },
+      "buffs": [
+        "Innate Breathe Fire spell (applies Divine Fire debuff)",
+        "Radiant Form (75%+ Fervor): levitation, +25% fire resistance, spell power scales with CHA",
+        "Stone Form (<25% Fervor): brief damage immunity plus STR/CON boost scaling with CHA",
+        "Passive Fervor regeneration up to 50%",
+        "Gains Fervor from casting Breathe Fire, kills, and skill training"
+      ],
+      "debuffs": [
+        "35% hungrier than other races",
+        "Radiant Form reduces CON based on CHA",
+        "Stone Form reduces DEX based on CHA",
+        "Weak to Polearms 20%, Ranged 10%"
+      ],
+      "notes": "Requires Deserters & Disciples DLC.",
+      "dlc": "Deserters & Disciples"
+    },
+    {
+      "id": "succubus",
+      "name": "Succubus",
+      "iconLocal": "assets/icons/races/succubus.png",
+      "statModifiers": {
+        "STR": 0,
+        "DEX": 0,
+        "CON": 0,
+        "INT": 0,
+        "PER": 0,
+        "CHA": 0
+      },
+      "buffs": [
+        "Innate Teleport and Polymorph spells",
+        "Cursed equipment is removable and grants bonuses (inverted curse/blessing system)",
+        "Gains mana from Strangulation",
+        "Can recruit drunk/confused Humans",
+        "Resists Magic 20%, Polearms 10%",
+        "Friendly with other Succubi, Incubi, and Automatons"
+      ],
+      "debuffs": [
+        "Blessed equipment cannot be removed",
+        "Weak to Swords 20% and Smite",
+        "Targeted as hostile by Humans and Shopkeepers"
+      ],
+      "notes": "Requires Myths and Outcasts DLC. Female-only; toggling male switches to Incubus if Legends and Pariahs is owned.",
+      "dlc": "Myths and Outcasts"
+    },
+    {
+      "id": "vampire",
+      "name": "Vampire",
+      "iconLocal": "assets/icons/races/vampire.png",
+      "statModifiers": {
+        "STR": 0,
+        "DEX": 0,
+        "CON": 0,
+        "INT": 0,
+        "PER": 0,
+        "CHA": 0
+      },
+      "buffs": [
+        "Innate Bloodletting and Levitation spells",
+        "Can spend health instead of mana to cast spells once mana is depleted",
+        "Unarmed attacks have a 10% chance to cause Bleeding",
+        "Kills may drop blood vials",
+        "Resists Swords 20%, Ranged 50%, Axes 20%, Magic 20%"
+      ],
+      "debuffs": [
+        "Ordinary food is inedible and causes sickness",
+        "Water deals high damage on contact",
+        "Weak to Maces 20%, Polearms 10%, water, and Smite"
+      ],
+      "notes": "Requires Myths and Outcasts DLC. Numeric stat modifiers not listed on wiki.",
+      "dlc": "Myths and Outcasts"
+    }
+  ],
+  "classes": [
+    {
+      "id": "barbarian",
+      "name": "Barbarian",
+      "iconLocal": "assets/icons/classes/barbarian.png",
+      "startingStats": {
+        "STR": 2,
+        "DEX": 0,
+        "CON": 1,
+        "INT": -2,
+        "PER": 0,
+        "CHA": -1
+      },
+      "startingSkills": {
+        "Alchemy": 10,
+        "Blocking": 25,
+        "Unarmed": 20,
+        "Axes": 50,
+        "Maces": 25
+      },
+      "buffs": [],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Rough ring of might",
+        "(Equipped) Serviceable wooden shield",
+        "(Equipped) Worn leather helm",
+        "(Equipped) Serviceable iron axe",
+        "Slightly-aged bread x2",
+        "Slightly-aged meat",
+        "Bubbly bottle of booze",
+        "Worn torch x2",
+        "Decrepit bronze tomahawk x2"
+      ],
+      "notes": "Melee-focused starter class, high STR/Axes."
+    },
+    {
+      "id": "warrior",
+      "name": "Warrior",
+      "iconLocal": "assets/icons/classes/warrior.png",
+      "startingStats": {
+        "STR": 1,
+        "DEX": 1,
+        "CON": 0,
+        "INT": -2,
+        "PER": -1,
+        "CHA": 1
+      },
+      "startingSkills": {
+        "Leadership": 40,
+        "Blocking": 25,
+        "Ranged": 25,
+        "Unarmed": 10,
+        "Swords": 25,
+        "Polearms": 50
+      },
+      "buffs": [],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Serviceable bronze shield",
+        "(Equipped) Serviceable iron spear",
+        "(Equipped) Serviceable iron breastpiece",
+        "(Equipped) Worn leather helm",
+        "(Equipped) Worn leather boots",
+        "Slightly-aged bread",
+        "Slightly-aged fish"
+      ],
+      "notes": "Balanced melee/leadership class."
+    },
+    {
+      "id": "healer",
+      "name": "Healer",
+      "iconLocal": "assets/icons/classes/healer.png",
+      "startingStats": {
+        "STR": -1,
+        "DEX": -1,
+        "CON": 2,
+        "INT": 1,
+        "PER": 0,
+        "CHA": 0
+      },
+      "startingSkills": {
+        "Lore": 10,
+        "Alchemy": 30,
+        "Mysticism": 25,
+        "Thaumaturgy": 50,
+        "Blocking": 10,
+        "Polearms": 25
+      },
+      "buffs": [],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Serviceable phrygian hat",
+        "(Equipped) Serviceable cloak",
+        "(Equipped) Serviceable healer doublet",
+        "(Equipped) Serviceable quarter staff",
+        "Bubbly potion of extra healing x3",
+        "Fresh fish",
+        "Slightly-aged apple",
+        "Serviceable magicstaff of slow",
+        "Serviceable towel",
+        "Brand-new spellbook of cure ailment",
+        "Brand-new spellbook of healing"
+      ],
+      "notes": "Support caster with high Thaumaturgy."
+    },
+    {
+      "id": "rogue",
+      "name": "Rogue",
+      "iconLocal": "assets/icons/classes/rogue.png",
+      "startingStats": {
+        "STR": -1,
+        "DEX": 2,
+        "CON": 0,
+        "INT": -1,
+        "PER": 2,
+        "CHA": -1
+      },
+      "startingSkills": {
+        "Lore": 25,
+        "Tinkering": 40,
+        "Alchemy": 20,
+        "Stealth": 50,
+        "Ranged": 25,
+        "Swords": 25
+      },
+      "buffs": [],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Excellent bronze sword",
+        "(Equipped) Serviceable leather gloves",
+        "(Equipped) Worn hood of whispers",
+        "(Equipped) Worn leather breastpiece",
+        "(Equipped) Worn cloak",
+        "Bubbly potion of sickness x5",
+        "Excellent lockpick x3",
+        "Excellent shortbow",
+        "Excellent noisemaker",
+        "Serviceable quiver of springshot ammo"
+      ],
+      "notes": "High Stealth and Tinkering, low STR."
+    },
+    {
+      "id": "wanderer",
+      "name": "Wanderer",
+      "iconLocal": "assets/icons/classes/wanderer.png",
+      "startingStats": {
+        "STR": 0,
+        "DEX": 1,
+        "CON": 1,
+        "INT": -1,
+        "PER": 1,
+        "CHA": -1
+      },
+      "startingSkills": {
+        "Trading": 25,
+        "Alchemy": 30,
+        "Stealth": 25,
+        "Ranged": 25,
+        "Unarmed": 10,
+        "Polearms": 25
+      },
+      "buffs": [],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Serviceable cloak",
+        "(Equipped) Serviceable Hood of Whispers",
+        "(Equipped) Serviceable leather Boots",
+        "(Equipped) Flawed Ring of Warning",
+        "(Equipped) Worn quarter staff",
+        "Fresh fish",
+        "Slightly-aged bread x2",
+        "Slightly-aged tin x2",
+        "Plain potion of cure ailment",
+        "Faded spellbook of detect food",
+        "Excellent slingshot",
+        "Excellent lantern",
+        "Serviceable tin opener",
+        "Serviceable towel",
+        "Marked scroll of magic mapping x6"
+      ],
+      "notes": "Well-rounded jack-of-all-trades class."
+    },
+    {
+      "id": "cleric",
+      "name": "Cleric",
+      "iconLocal": "assets/icons/classes/cleric.png",
+      "startingStats": {
+        "STR": 0,
+        "DEX": -1,
+        "CON": 1,
+        "INT": 0,
+        "PER": 1,
+        "CHA": 0
+      },
+      "startingSkills": {
+        "Leadership": 20,
+        "Alchemy": 20,
+        "Thaumaturgy": 40,
+        "Blocking": 10,
+        "Maces": 25
+      },
+      "buffs": [],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Serviceable cloak",
+        "(Equipped) Worn iron bracers (+1)",
+        "(Equipped) Worn wooden shield",
+        "(Equipped) Worn leather breastpiece",
+        "(Equipped) Serviceable iron mace (+1)",
+        "Slightly-aged bread",
+        "Brand-new scroll of summon x3",
+        "Bubbly potion of healing x2",
+        "Torn spellbook of troll's blood"
+      ],
+      "notes": "Support/melee hybrid caster."
+    },
+    {
+      "id": "merchant",
+      "name": "Merchant",
+      "iconLocal": "assets/icons/classes/merchant.png",
+      "startingStats": {
+        "STR": 0,
+        "DEX": -1,
+        "CON": 0,
+        "INT": 0,
+        "PER": 1,
+        "CHA": 1
+      },
+      "startingSkills": {
+        "Leadership": 20,
+        "Trading": 50,
+        "Lore": 50,
+        "Tinkering": 10,
+        "Alchemy": 10,
+        "Axes": 25
+      },
+      "buffs": [],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Excellent bronze axe",
+        "(Equipped) Excellent leather gloves",
+        "(Equipped) Serviceable phrygian hat",
+        "(Equipped) Serviceable monocle",
+        "(Equipped) Worn leather breastpiece",
+        "Brand-new scroll of remove curse x3",
+        "Brand-new scroll of identify x2",
+        "Fresh meat x2",
+        "Slightly-aged cheese",
+        "Serviceable pickaxe"
+      ],
+      "notes": "Economy-focused class with very high Trading/Lore."
+    },
+    {
+      "id": "wizard",
+      "name": "Wizard",
+      "iconLocal": "assets/icons/classes/wizard.png",
+      "startingStats": {
+        "STR": 0,
+        "DEX": -1,
+        "CON": 0,
+        "INT": 3,
+        "PER": 1,
+        "CHA": -1
+      },
+      "startingSkills": {
+        "Lore": 10,
+        "Alchemy": 10,
+        "Sorcery": 50,
+        "Thaumaturgy": 15,
+        "Polearms": 25
+      },
+      "buffs": [],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Serviceable quarter staff",
+        "(Equipped) Serviceable wizard hat",
+        "(Equipped) Serviceable leather boots",
+        "(Equipped) Serviceable cloak of protection",
+        "(Equipped) Serviceable wizard doublet",
+        "(Equipped) Flawless amulet of magic reflection",
+        "Excellent magicstaff of light",
+        "Bubbly potion of restore magic x2",
+        "Marked spellbook of fireball",
+        "Marked spellbook of cold",
+        "Marked spellbook of light"
+      ],
+      "notes": "Pure caster with high INT and Sorcery."
+    },
+    {
+      "id": "arcanist",
+      "name": "Arcanist",
+      "iconLocal": "assets/icons/classes/arcanist.png",
+      "startingStats": {
+        "STR": -1,
+        "DEX": 1,
+        "CON": -1,
+        "INT": 1,
+        "PER": 1,
+        "CHA": -1
+      },
+      "startingSkills": {
+        "Tinkering": 25,
+        "Sorcery": 30,
+        "Stealth": 25,
+        "Ranged": 25
+      },
+      "buffs": [],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Serviceable leather breastpiece",
+        "(Equipped) Serviceable leather boots",
+        "(Equipped) Worn apprentice's hood",
+        "(Equipped) Worn cloak",
+        "(Equipped) Worn crossbow",
+        "Brand-new scroll of charging x2",
+        "Bubbly potion of restore magic",
+        "Serviceable magicstaff of opening",
+        "Serviceable magicstaff of fire",
+        "Faded spellbook of forcebolt",
+        "Serviceable quiver of fire ammo x15",
+        "Spell: Windgate"
+      ],
+      "notes": "Caster/tinkerer hybrid."
+    },
+    {
+      "id": "joker",
+      "name": "Joker",
+      "iconLocal": "assets/icons/classes/joker.png",
+      "startingStats": {
+        "STR": -1,
+        "DEX": 0,
+        "CON": -1,
+        "INT": 1,
+        "PER": 0,
+        "CHA": 1
+      },
+      "startingSkills": {
+        "Leadership": 20,
+        "Trading": 25,
+        "Tinkering": 25,
+        "Alchemy": 10,
+        "Sorcery": 10,
+        "Mysticism": 25,
+        "Stealth": 10,
+        "Ranged": 20
+      },
+      "buffs": [],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Serviceable jester hat (+1)",
+        "Excellent slingshot",
+        "Flawed ring of levitation",
+        "Faded spellbook of confuse",
+        "Excellent lockpick",
+        "Serviceable blindfold",
+        "Bubbly potion of polymorph",
+        "Slightly-aged cream pie x8",
+        "Brand-new scroll of teleportation x3",
+        "Brand-new scroll of food",
+        "Flawless Luckstone"
+      ],
+      "notes": "Jack-of-all-trades with many low-level skills."
+    },
+    {
+      "id": "sexton",
+      "name": "Sexton",
+      "iconLocal": "assets/icons/classes/sexton.png",
+      "startingStats": {
+        "STR": -1,
+        "DEX": 1,
+        "CON": -1,
+        "INT": 1,
+        "PER": 0,
+        "CHA": 0
+      },
+      "startingSkills": {
+        "Alchemy": 20,
+        "Mysticism": 40,
+        "Stealth": 40,
+        "Blocking": 10,
+        "Ranged": 20,
+        "Maces": 10
+      },
+      "buffs": [],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Serviceable fez",
+        "(Equipped) Worn leather breastpiece",
+        "(Equipped) Serviceable leather boots",
+        "(Equipped) Serviceable bronze mace",
+        "(Equipped) Serviceable crystal shard x2",
+        "Serviceable steel chakram x3",
+        "Faded spellbook of sleep",
+        "Faded spellbook of opening",
+        "Faded spellbook of locking",
+        "Slightly-aged bread",
+        "Slightly-aged tomalley"
+      ],
+      "notes": "Stealthy support caster."
+    },
+    {
+      "id": "ninja",
+      "name": "Ninja",
+      "iconLocal": "assets/icons/classes/ninja.png",
+      "startingStats": {
+        "STR": 0,
+        "DEX": 2,
+        "CON": -1,
+        "INT": -2,
+        "PER": 1,
+        "CHA": 0
+      },
+      "startingSkills": {
+        "Stealth": 60,
+        "Ranged": 40,
+        "Swords": 60
+      },
+      "buffs": [],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Decrepit crystal sword",
+        "(Equipped) Serviceable assassin's hood",
+        "(Equipped) Serviceable tunic",
+        "(Equipped) Serviceable leather boots of speed",
+        "(Equipped) Serviceable bandit mask",
+        "(Equipped) Excellent black cloak",
+        "Worn iron dagger x5",
+        "Serviceable beartrap x3",
+        "Bubbly potion of paralysis",
+        "Bubbly potion of invisibility",
+        "Marked scroll of teleportation x3"
+      ],
+      "notes": "High DEX/Stealth/Swords melee-stealth hybrid."
+    },
+    {
+      "id": "monk",
+      "name": "Monk",
+      "iconLocal": "assets/icons/classes/monk.png",
+      "startingStats": {
+        "STR": 1,
+        "DEX": 0,
+        "CON": 2,
+        "INT": 0,
+        "PER": -1,
+        "CHA": 0
+      },
+      "startingSkills": {
+        "Leadership": 10,
+        "Alchemy": 20,
+        "Thaumaturgy": 25,
+        "Blocking": 40,
+        "Unarmed": 50
+      },
+      "buffs": [],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Excellent tunic",
+        "(Equipped) Excellent brass knuckles",
+        "(Equipped) Flawed ring of slow digestion",
+        "Faded spellbook of light",
+        "Worn torch",
+        "Bubbly potion of polymorph x2"
+      ],
+      "notes": "High CON, specializes in unarmed combat."
+    },
+    {
+      "id": "conjurer",
+      "name": "Conjurer",
+      "iconLocal": "assets/icons/classes/conjurer.png",
+      "startingStats": {
+        "STR": 0,
+        "DEX": -1,
+        "CON": 2,
+        "INT": 1,
+        "PER": -2,
+        "CHA": 0
+      },
+      "startingSkills": {
+        "Leadership": 40,
+        "Alchemy": 20,
+        "Mysticism": 40,
+        "Thaumaturgy": 15,
+        "Stealth": 20,
+        "Ranged": 20
+      },
+      "buffs": [],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Excellent magicstaff of lightning",
+        "(Equipped) Excellent lantern",
+        "(Equipped) Serviceable apprentice's hood",
+        "(Equipped) Serviceable cloak",
+        "Bubbly potion of restore magic",
+        "Torn spellbook of poison"
+      ],
+      "notes": "Support/summon-oriented caster."
+    },
+    {
+      "id": "accursed",
+      "name": "Accursed",
+      "iconLocal": "assets/icons/classes/accursed.png",
+      "startingStats": {
+        "STR": -2,
+        "DEX": -3,
+        "CON": -2,
+        "INT": 5,
+        "PER": -1,
+        "CHA": 0
+      },
+      "startingSkills": {
+        "Lore": 20,
+        "Sorcery": 60,
+        "Mysticism": 20,
+        "Stealth": 40,
+        "Unarmed": 40
+      },
+      "buffs": [
+        "Very high starting INT (+5) for powerful Sorcery"
+      ],
+      "debuffs": [
+        "Very low STR/DEX/CON make melee and survivability weak"
+      ],
+      "startingEquipment": [
+        "(Equipped) Excellent silver doublet",
+        "(Equipped) Serviceable suede gloves",
+        "(Equipped) Serviceable suede boots",
+        "Bubbly potion of restore magic x2",
+        "Fresh vial of blood x3",
+        "Faded spellbook of invisibility"
+      ],
+      "notes": "Extreme glass-cannon caster class."
+    },
+    {
+      "id": "mesmer",
+      "name": "Mesmer",
+      "iconLocal": "assets/icons/classes/mesmer.png",
+      "startingStats": {
+        "STR": -2,
+        "DEX": -2,
+        "CON": -3,
+        "INT": 2,
+        "PER": 2,
+        "CHA": 4
+      },
+      "startingSkills": {
+        "Leadership": 60,
+        "Sorcery": 25,
+        "Mysticism": 60,
+        "Polearms": 20
+      },
+      "buffs": [
+        "Very high CHA and Leadership, good for recruiting/taming followers"
+      ],
+      "debuffs": [
+        "Very low CON makes it fragile"
+      ],
+      "startingEquipment": [
+        "(Equipped) Excellent magicstaff of charm monster (+1)",
+        "(Equipped) Serviceable apprentice's hood",
+        "(Equipped) Serviceable silver cloak",
+        "(Equipped) Flawless ring of protection (+2)",
+        "Serviceable magicstaff of cold",
+        "Bubbly potion of restore magic x2",
+        "Bubbly potion of confusion x3",
+        "Torn spellbook of charm monster"
+      ],
+      "notes": "Charisma-focused support/summoner build."
+    },
+    {
+      "id": "brewer",
+      "name": "Brewer",
+      "iconLocal": "assets/icons/classes/brewer.png",
+      "startingStats": {
+        "STR": -2,
+        "DEX": 1,
+        "CON": -2,
+        "INT": -2,
+        "PER": 1,
+        "CHA": 1
+      },
+      "startingSkills": {
+        "Leadership": 25,
+        "Trading": 10,
+        "Lore": 10,
+        "Alchemy": 50,
+        "Unarmed": 25,
+        "Axes": 10
+      },
+      "buffs": [],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Serviceable empty bottle x3",
+        "(Equipped) Worn iron boots",
+        "(Equipped) Serviceable backpack",
+        "Excellent iron axe",
+        "Torn copy of Bottle Book",
+        "Excellent alembic",
+        "Slightly-aged bread",
+        "Bubbly potion of firestorm x2",
+        "Bubbly potion of acid x2",
+        "Bubbly bottle of booze x3",
+        "Bubbly bottle of fruit juice x2",
+        "Bubbly potion of polymorph",
+        "Bubbly potion of blindness x2",
+        "Bubbly potion of speed"
+      ],
+      "notes": "High Alchemy specialist class."
+    },
+    {
+      "id": "mechanist",
+      "name": "Mechanist",
+      "iconLocal": "assets/icons/classes/mechanist.png",
+      "startingStats": {
+        "STR": -2,
+        "DEX": 0,
+        "CON": -3,
+        "INT": 1,
+        "PER": 0,
+        "CHA": 0
+      },
+      "startingSkills": {
+        "Trading": 10,
+        "Tinkering": 40,
+        "Alchemy": 10,
+        "Ranged": 10
+      },
+      "buffs": [],
+      "debuffs": [
+        "Very low CON makes it fragile"
+      ],
+      "startingEquipment": [
+        "(Equipped) Excellent crossbow",
+        "(Equipped) Excellent leather apron",
+        "(Equipped) Excellent tinkering kit",
+        "Excellent beartrap",
+        "Excellent sleep trap",
+        "Excellent lockpick",
+        "Serviceable empty bottle",
+        "Simple dummybot",
+        "Simple sentry bot",
+        "Marked scroll of fire",
+        "Decrepit magic scrap x8",
+        "Decrepit metal scrap x16"
+      ],
+      "notes": "Tinkering specialist class."
+    },
+    {
+      "id": "punisher",
+      "name": "Punisher",
+      "iconLocal": "assets/icons/classes/punisher.png",
+      "startingStats": {
+        "STR": -1,
+        "DEX": 1,
+        "CON": -1,
+        "INT": -1,
+        "PER": 0,
+        "CHA": 0
+      },
+      "startingSkills": {
+        "Sorcery": 20,
+        "Mysticism": 20,
+        "Ranged": 25,
+        "Axes": 25
+      },
+      "buffs": [],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Worn whip",
+        "(Equipped) Serviceable executioner hood",
+        "Decrepit crystal axe",
+        "Rough ring of conflict",
+        "Fresh meat",
+        "Spell: Teleport Other",
+        "Spell: Inner Demon"
+      ],
+      "notes": "Balanced hybrid caster/fighter."
+    },
+    {
+      "id": "shaman",
+      "name": "Shaman",
+      "iconLocal": "assets/icons/classes/shaman.png",
+      "startingStats": {
+        "STR": -1,
+        "DEX": 0,
+        "CON": 0,
+        "INT": 2,
+        "PER": 1,
+        "CHA": 1
+      },
+      "startingSkills": {
+        "Alchemy": 10,
+        "Mysticism": 40,
+        "Stealth": 10,
+        "Unarmed": 10
+      },
+      "buffs": [
+        "Has transformation variants (Rat, Arthropod, Troll, Imp) with distinct stat modifiers when transformed"
+      ],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Excellent magicstaff of poison",
+        "(Equipped) Serviceable shaman mask",
+        "Excellent Enchanted Feather",
+        "Worn bronze sword",
+        "Rough rock x3",
+        "Spell: Rat Form",
+        "Spell: Arthropod Form",
+        "Spell: Troll Form",
+        "Spell: Imp Form"
+      ],
+      "notes": "Mysticism-focused caster with unique polymorph-style transformation mechanic."
+    },
+    {
+      "id": "hunter",
+      "name": "Hunter",
+      "iconLocal": "assets/icons/classes/hunter.png",
+      "startingStats": {
+        "STR": -3,
+        "DEX": 1,
+        "CON": -1,
+        "INT": -3,
+        "PER": 3,
+        "CHA": 0
+      },
+      "startingSkills": {
+        "Lore": 20,
+        "Tinkering": 10,
+        "Stealth": 25,
+        "Ranged": 50
+      },
+      "buffs": [
+        "Very high PER for ranged accuracy"
+      ],
+      "debuffs": [
+        "Very low STR and INT"
+      ],
+      "startingEquipment": [
+        "(Equipped) Excellent longbow",
+        "(Equipped) Excellent leather boots",
+        "(Equipped) Worn iron bracers",
+        "(Equipped) Flawed amulet of poison resistance",
+        "Excellent blindfold of telepathy",
+        "Decrepit boomerang",
+        "Serviceable quiver of silver ammo x40",
+        "Serviceable quiver of swift ammo x40",
+        "Serviceable quiver of hunting ammo x20",
+        "Bubbly potion of speed x2",
+        "Brand-new scroll of conjure arrow x2",
+        "Fresh meat",
+        "Fresh fish"
+      ],
+      "notes": "Ranged combat specialist."
+    },
+    {
+      "id": "bard",
+      "name": "Bard",
+      "iconLocal": "assets/icons/classes/bard.png",
+      "startingStats": {
+        "STR": -2,
+        "DEX": 1,
+        "CON": -2,
+        "INT": 0,
+        "PER": 0,
+        "CHA": 3
+      },
+      "startingSkills": {
+        "Leadership": 15,
+        "Trading": 15,
+        "Lore": 50,
+        "Mysticism": 15,
+        "Stealth": 15,
+        "Swords": 25
+      },
+      "buffs": [
+        "High CHA for leadership/recruiting"
+      ],
+      "debuffs": [
+        "Low STR/CON"
+      ],
+      "startingEquipment": [
+        "(Equipped) Worn rapier",
+        "(Equipped) Excellent flute",
+        "(Equipped) Excellent plumed cap",
+        "(Equipped) Excellent bandit leather",
+        "(Equipped) Serviceable loafers",
+        "Excellent lyre",
+        "Bubbly potion of restore magic",
+        "Fresh fish x2"
+      ],
+      "notes": "Charisma/Lore-focused hybrid class."
+    },
+    {
+      "id": "sapper",
+      "name": "Sapper",
+      "iconLocal": "assets/icons/classes/sapper.png",
+      "startingStats": {
+        "STR": 1,
+        "DEX": 1,
+        "CON": -3,
+        "INT": -2,
+        "PER": 0,
+        "CHA": -3
+      },
+      "startingSkills": {
+        "Alchemy": 25,
+        "Sorcery": 15,
+        "Stealth": 25,
+        "Ranged": 15,
+        "Maces": 50
+      },
+      "buffs": [],
+      "debuffs": [
+        "Very low CON and CHA"
+      ],
+      "startingEquipment": [
+        "(Equipped) Serviceable steel flail",
+        "(Equipped) Excellent teal hood",
+        "(Equipped) Excellent shawl",
+        "(Equipped) Worn leather gloves",
+        "(Equipped) Worn cleats",
+        "(Equipped) Worn eyepatch",
+        "(Equipped) Flawless amulet of burning resistance",
+        "(Equipped) Excellent frypan",
+        "Serviceable bolas x3",
+        "Serviceable towel x3",
+        "Mouldy meat",
+        "Mouldy bread",
+        "Spell: Booby Trap"
+      ],
+      "notes": "Mace/Alchemy specialist, fragile but hard-hitting."
+    },
+    {
+      "id": "scion",
+      "name": "Scion",
+      "iconLocal": "assets/icons/classes/scion.png",
+      "startingStats": {
+        "STR": -2,
+        "DEX": -2,
+        "CON": 0,
+        "INT": 3,
+        "PER": 1,
+        "CHA": -1
+      },
+      "startingSkills": {
+        "Lore": 10,
+        "Alchemy": 10,
+        "Sorcery": 40,
+        "Mysticism": 40,
+        "Thaumaturgy": 40
+      },
+      "buffs": [
+        "High INT and multiple caster skills"
+      ],
+      "debuffs": [
+        "Low STR/DEX"
+      ],
+      "startingEquipment": [
+        "(Equipped) Excellent archon scepter",
+        "(Equipped) Serviceable wizard robe",
+        "(Equipped) Worn quilted boots",
+        "(Equipped) Excellent icon of void rift",
+        "Worn silver key x2",
+        "Plain potion of restore magic x2",
+        "Plain potion of healing",
+        "Slightly-aged bread (+1) x2",
+        "Spell: Summon Earth Sprite",
+        "Spell: Telekinesis",
+        "Spell: Blessed Meals"
+      ],
+      "notes": "Broad caster specializing in Sorcery, Mysticism, and Thaumaturgy simultaneously."
+    },
+    {
+      "id": "hermit",
+      "name": "Hermit",
+      "iconLocal": "assets/icons/classes/hermit.png",
+      "startingStats": {
+        "STR": -2,
+        "DEX": -2,
+        "CON": 2,
+        "INT": 1,
+        "PER": 0,
+        "CHA": 1
+      },
+      "startingSkills": {
+        "Alchemy": 10,
+        "Sorcery": 15,
+        "Mysticism": 40,
+        "Stealth": 25,
+        "Maces": 25
+      },
+      "buffs": [],
+      "debuffs": [
+        "Low STR/DEX"
+      ],
+      "startingEquipment": [
+        "(Equipped) Worn shillelagh",
+        "(Equipped) Serviceable leather boots",
+        "(Equipped) Serviceable cloak of protection",
+        "(Equipped) Flawed amulet of olympic swimming",
+        "(Equipped) Excellent duck",
+        "Worn pipe",
+        "Bubbly potion of restore magic",
+        "Bubbly potion of booze",
+        "Slightly-aged apple x3",
+        "Fresh meat",
+        "Spell: Magicians' Bubble",
+        "Spell: Project Spirit",
+        "Spell: Deep Shade"
+      ],
+      "notes": "Reclusive caster/support hybrid."
+    },
+    {
+      "id": "paladin",
+      "name": "Paladin",
+      "iconLocal": "assets/icons/classes/paladin.png",
+      "startingStats": {
+        "STR": 1,
+        "DEX": -1,
+        "CON": 0,
+        "INT": 1,
+        "PER": -1,
+        "CHA": 1
+      },
+      "startingSkills": {
+        "Leadership": 10,
+        "Lore": 25,
+        "Thaumaturgy": 25,
+        "Blocking": 10,
+        "Swords": 50
+      },
+      "buffs": [],
+      "debuffs": [],
+      "startingEquipment": [
+        "(Equipped) Serviceable claymore",
+        "(Equipped) Excellent chain coif",
+        "(Equipped) Excellent chain hauberk",
+        "(Equipped) Excellent symbol of sanctuary",
+        "Bubbly potion of water (+4) x4",
+        "Slightly-aged bread x3",
+        "Spell: Divine Zeal"
+      ],
+      "notes": "Melee/support hybrid, high Swords skill."
+    }
+  ]
+}
