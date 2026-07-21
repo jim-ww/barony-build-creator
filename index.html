@@ -14,7 +14,7 @@
       x-data="buildPlanner()"
       x-init="init()"
       x-cloak
-      class="max-w-6xl mx-auto px-4 py-8"
+      class="max-w-7xl mx-auto px-4 py-8"
     >
       <header class="mb-8 flex items-center justify-between flex-wrap gap-4">
         <div>
@@ -24,6 +24,13 @@
           </p>
         </div>
         <div class="flex gap-2">
+          <button
+            @click="saveBuild()"
+            :disabled="!selectedRaceId && !selectedClassId"
+            class="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 disabled:bg-zinc-800/50 disabled:text-zinc-600 disabled:cursor-not-allowed text-sm font-medium transition"
+          >
+            Save Build
+          </button>
           <button
             @click="shareUrl()"
             :disabled="!selectedRaceId && !selectedClassId"
@@ -41,6 +48,62 @@
         </div>
       </header>
 
+      <div class="mb-8 flex flex-col sm:flex-row gap-2 max-w-xl">
+        <input
+          type="text"
+          x-model="buildName"
+          placeholder="Build name (optional)"
+          maxlength="60"
+          class="bg-transparent border-b border-zinc-800 focus:border-zinc-600 outline-none text-sm text-zinc-300 placeholder-zinc-600 py-1 sm:w-56"
+        />
+        <input
+          type="text"
+          x-model="buildDescription"
+          placeholder="Short description (optional)"
+          maxlength="140"
+          class="bg-transparent border-b border-zinc-800 focus:border-zinc-600 outline-none text-sm text-zinc-300 placeholder-zinc-600 py-1 flex-1"
+        />
+      </div>
+
+      <div class="flex gap-8 items-start">
+        <!-- Saved builds sidebar -->
+        <aside class="hidden lg:block w-56 shrink-0 sticky top-8">
+          <h2 class="text-xs font-semibold uppercase tracking-wide text-zinc-500 mb-2">Saved Builds</h2>
+          <template x-if="savedBuilds.length === 0">
+            <p class="text-xs text-zinc-600">No builds saved yet.</p>
+          </template>
+          <input
+            x-show="savedBuilds.length > 0"
+            type="text"
+            x-model="savedBuildsSearch"
+            placeholder="Search…"
+            class="w-full mb-2 bg-transparent border-b border-zinc-800 focus:border-zinc-600 outline-none text-xs text-zinc-300 placeholder-zinc-600 py-1"
+          />
+          <template x-if="savedBuilds.length > 0 && filteredSavedBuilds.length === 0">
+            <p class="text-xs text-zinc-600">No matches.</p>
+          </template>
+          <ul class="space-y-1">
+            <template x-for="build in filteredSavedBuilds" :key="build.id">
+              <li class="group flex items-center gap-1">
+                <button
+                  @click="loadBuild(build)"
+                  class="flex-1 text-left text-xs px-2 py-1.5 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900 transition truncate"
+                  :title="`${build.name} — ${raceName(build.race)} / ${className(build.class)}`"
+                  x-text="build.name"
+                ></button>
+                <button
+                  @click.stop="deleteBuild(build.id)"
+                  class="opacity-0 group-hover:opacity-100 text-zinc-600 hover:text-rose-400 text-xs px-1 transition"
+                  title="Delete"
+                >
+                  ✕
+                </button>
+              </li>
+            </template>
+          </ul>
+        </aside>
+
+        <div class="flex-1 min-w-0">
       <template x-if="!dataLoaded">
         <p class="text-zinc-400">Loading data…</p>
       </template>
@@ -157,6 +220,8 @@
           </section>
         </div>
       </template>
+        </div>
+      </div>
 
       <footer class="mt-16 text-center text-xs text-zinc-600">
         Data sourced from
