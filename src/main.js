@@ -21,6 +21,16 @@ function buildPlanner() {
     activeCommunityTagFilter: null,
     nostrSecretKeyHex: Alpine.$persist(null).as("barony-nostr-sk"),
     nostrPubkey: null,
+    DEFAULT_NOSTR_RELAYS: [
+      "wss://relay.damus.io",
+      "wss://nos.lol",
+      "wss://relay.nostr.band",
+      "wss://relay.primal.net",
+      "wss://offchain.pub",
+    ],
+    nostrRelaysOverride: Alpine.$persist(null).as("barony-nostr-relays"),
+    relaysInput: "",
+    relaysSaveMessage: "",
     NOSTR_BUILD_KIND: 30078,
     NOSTR_APP_LABEL: "barony-build-creator",
     // Junk published to public relays during development testing, before deletion-on-cleanup
@@ -81,13 +91,10 @@ function buildPlanner() {
       this._nostrSkBytes = skBytes;
       this._finalizeEvent = finalizeEvent;
       this.nostrPool = new SimplePool();
-      this.nostrRelays = [
-        "wss://relay.damus.io",
-        "wss://nos.lol",
-        "wss://relay.nostr.band",
-        "wss://relay.primal.net",
-        "wss://offchain.pub",
-      ];
+      this.nostrRelays = this.nostrRelaysOverride && this.nostrRelaysOverride.length
+        ? this.nostrRelaysOverride
+        : this.DEFAULT_NOSTR_RELAYS;
+      this.relaysInput = this.nostrRelays.join("\n");
 
       this.nostrPool.subscribeMany(
         this.nostrRelays,
@@ -99,6 +106,26 @@ function buildPlanner() {
           onevent: (event) => this.handleNostrEvent(event),
         },
       );
+    },
+
+    saveRelays() {
+      const relays = [
+        ...new Set(
+          this.relaysInput
+            .split(/[\n,]/)
+            .map((r) => r.trim())
+            .filter((r) => r && (r.startsWith("wss://") || r.startsWith("ws://"))),
+        ),
+      ];
+      if (relays.length === 0) return;
+      this.nostrRelaysOverride = relays;
+      this.relaysSaveMessage = "Saved. Refresh the page to apply the new relays.";
+    },
+
+    resetRelays() {
+      this.nostrRelaysOverride = null;
+      this.relaysInput = this.DEFAULT_NOSTR_RELAYS.join("\n");
+      this.relaysSaveMessage = "Reset to defaults. Refresh the page to apply.";
     },
 
     bytesToHex(bytes) {

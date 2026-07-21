@@ -309,6 +309,43 @@
         </div>
       </template>
         </div>
+
+        <!-- Relay settings sidebar -->
+        <aside class="hidden lg:block w-56 shrink-0 sticky top-8">
+          <details class="group">
+            <summary class="text-xs font-semibold uppercase tracking-wide text-zinc-500 mb-2 cursor-pointer list-none flex items-center gap-1 hover:text-zinc-300 transition">
+              <span>Community Sharing Settings</span>
+              <span class="text-zinc-600 group-open:rotate-90 transition-transform">›</span>
+            </summary>
+            <p class="text-[11px] text-zinc-600 mt-2 mb-2 leading-relaxed">
+              Community Builds are stored on <strong class="text-zinc-500">Nostr</strong>, a public network of independent
+              servers called "relays". You don't need to touch this — it's only here if you want to route through
+              different relays than the defaults.
+            </p>
+            <textarea
+              x-model="relaysInput"
+              @input="relaysSaveMessage = ''"
+              rows="6"
+              class="w-full bg-transparent border border-zinc-800 focus:border-zinc-600 outline-none rounded-md text-[11px] text-zinc-300 placeholder-zinc-600 p-2 font-mono"
+            ></textarea>
+            <p class="text-[11px] text-zinc-600 mt-1">One relay per line.</p>
+            <div class="flex gap-2 mt-2">
+              <button
+                @click="saveRelays()"
+                class="flex-1 px-2 py-1 rounded-md bg-zinc-800 hover:bg-zinc-700 text-[11px] transition"
+              >
+                Save
+              </button>
+              <button
+                @click="resetRelays()"
+                class="flex-1 px-2 py-1 rounded-md bg-zinc-800 hover:bg-zinc-700 text-[11px] transition"
+              >
+                Reset to defaults
+              </button>
+            </div>
+            <p x-show="relaysSaveMessage" class="text-[11px] text-emerald-400 mt-2" x-text="relaysSaveMessage"></p>
+          </details>
+        </aside>
       </div>
 
       <footer class="mt-16 text-center text-xs text-zinc-600">
