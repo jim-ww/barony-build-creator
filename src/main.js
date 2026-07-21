@@ -7,6 +7,21 @@ function buildPlanner() {
     dataLoaded: false,
     shareCopied: false,
 
+    raceTabs: ["All", "Melee", "Ranged", "Magic", "Universal"],
+    classTabs: ["All", "Melee", "Ranged", "Magic", "Universal", "Specialized"],
+    activeRaceTab: "All",
+    activeClassTab: "All",
+
+    get filteredRaces() {
+      if (this.activeRaceTab === "All") return this.races;
+      return this.races.filter((r) => (r.categories || []).includes(this.activeRaceTab));
+    },
+
+    get filteredClasses() {
+      if (this.activeClassTab === "All") return this.classes;
+      return this.classes.filter((c) => (c.categories || []).includes(this.activeClassTab));
+    },
+
     async init() {
       const res = await fetch("data/barony-data.json");
       const data = await res.json();

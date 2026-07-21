@@ -17,7 +17,8 @@
         "Welcomed by shopkeepers"
       ],
       "debuffs": [],
-      "notes": "Baseline, well-rounded race with no combat resistances/weaknesses. Available since the base game; other races were added by later DLCs."
+      "notes": "Baseline, well-rounded race with no combat resistances/weaknesses. Available since the base game; other races were added by later DLCs.",
+      "categories": []
     },
     {
       "id": "skeleton",
@@ -44,7 +45,8 @@
         "Targeted as hostile by Humans and Shopkeepers"
       ],
       "notes": "Requires Myths and Outcasts DLC. Numeric stat modifiers not listed on wiki.",
-      "dlc": "Myths and Outcasts"
+      "dlc": "Myths and Outcasts",
+      "categories": []
     },
     {
       "id": "automaton",
@@ -74,7 +76,8 @@
         "Must fuel boiler with gems/scrolls/books/scrap instead of eating normal food"
       ],
       "notes": "Requires Legends and Pariahs DLC. Numeric stat modifiers not listed on wiki.",
-      "dlc": "Legends and Pariahs"
+      "dlc": "Legends and Pariahs",
+      "categories": []
     },
     {
       "id": "dryad",
@@ -102,7 +105,8 @@
         "Weak to Axes 30%, Swords 30%, Magic 10%"
       ],
       "notes": "Requires Deserters & Disciples DLC. Numeric stat modifiers not listed on wiki.",
-      "dlc": "Deserters & Disciples"
+      "dlc": "Deserters & Disciples",
+      "categories": []
     },
     {
       "id": "gnome",
@@ -131,7 +135,8 @@
         "Weak to Magic 10%, Ranged 10%"
       ],
       "notes": "Requires Deserters & Disciples DLC.",
-      "dlc": "Deserters & Disciples"
+      "dlc": "Deserters & Disciples",
+      "categories": []
     },
     {
       "id": "goatman",
@@ -162,7 +167,8 @@
         "Weak to Magic 40%, Polearms 10%, Axes 10%, Ranged 10%"
       ],
       "notes": "Requires Myths and Outcasts DLC. Stat modifiers are conditional (drunk/hungover), not a flat starting bonus.",
-      "dlc": "Myths and Outcasts"
+      "dlc": "Myths and Outcasts",
+      "categories": []
     },
     {
       "id": "goblin",
@@ -190,7 +196,8 @@
         "Targeted as hostile by Humans and Shopkeepers"
       ],
       "notes": "Requires Legends and Pariahs DLC. Numeric stat modifiers not listed on wiki.",
-      "dlc": "Legends and Pariahs"
+      "dlc": "Legends and Pariahs",
+      "categories": []
     },
     {
       "id": "gremlin",
@@ -218,7 +225,8 @@
         "Targeted as hostile by Humans and Shopkeepers"
       ],
       "notes": "Requires Deserters & Disciples DLC.",
-      "dlc": "Deserters & Disciples"
+      "dlc": "Deserters & Disciples",
+      "categories": []
     },
     {
       "id": "incubus",
@@ -246,7 +254,8 @@
         "Weak to Ranged 30%, Swords 20%, and Smite"
       ],
       "notes": "Requires Legends and Pariahs DLC. Male-only; selecting female switches to Succubus (if Myths and Outcasts owned) or Human.",
-      "dlc": "Legends and Pariahs"
+      "dlc": "Legends and Pariahs",
+      "categories": []
     },
     {
       "id": "insectoid",
@@ -278,7 +287,8 @@
         }
       ],
       "notes": "Requires Legends and Pariahs DLC.",
-      "dlc": "Legends and Pariahs"
+      "dlc": "Legends and Pariahs",
+      "categories": []
     },
     {
       "id": "myconid",
@@ -305,7 +315,8 @@
         "Short form vulnerable to knockback and cannot see through door windows"
       ],
       "notes": "Requires Deserters & Disciples DLC.",
-      "dlc": "Deserters & Disciples"
+      "dlc": "Deserters & Disciples",
+      "categories": []
     },
     {
       "id": "salamander",
@@ -333,7 +344,8 @@
         "Weak to Polearms 20%, Ranged 10%"
       ],
       "notes": "Requires Deserters & Disciples DLC.",
-      "dlc": "Deserters & Disciples"
+      "dlc": "Deserters & Disciples",
+      "categories": []
     },
     {
       "id": "succubus",
@@ -361,7 +373,8 @@
         "Targeted as hostile by Humans and Shopkeepers"
       ],
       "notes": "Requires Myths and Outcasts DLC. Female-only; toggling male switches to Incubus if Legends and Pariahs is owned.",
-      "dlc": "Myths and Outcasts"
+      "dlc": "Myths and Outcasts",
+      "categories": []
     },
     {
       "id": "vampire",
@@ -388,7 +401,8 @@
         "Weak to Maces 20%, Polearms 10%, water, and Smite"
       ],
       "notes": "Requires Myths and Outcasts DLC. Numeric stat modifiers not listed on wiki.",
-      "dlc": "Myths and Outcasts"
+      "dlc": "Myths and Outcasts",
+      "categories": []
     }
   ],
   "classes": [
@@ -424,7 +438,8 @@
         "Worn torch x2",
         "Decrepit bronze tomahawk x2"
       ],
-      "notes": "Melee-focused starter class, high STR/Axes."
+      "notes": "Melee-focused starter class, high STR/Axes.",
+      "categories": []
     },
     {
       "id": "warrior",
@@ -457,7 +472,8 @@
         "Slightly-aged bread",
         "Slightly-aged fish"
       ],
-      "notes": "Balanced melee/leadership class."
+      "notes": "Balanced melee/leadership class.",
+      "categories": []
     },
     {
       "id": "healer",
@@ -494,7 +510,8 @@
         "Brand-new spellbook of cure ailment",
         "Brand-new spellbook of healing"
       ],
-      "notes": "Support caster with high Thaumaturgy."
+      "notes": "Support caster with high Thaumaturgy.",
+      "categories": []
     },
     {
       "id": "rogue",
@@ -530,7 +547,8 @@
         "Excellent noisemaker",
         "Serviceable quiver of springshot ammo"
       ],
-      "notes": "High Stealth and Tinkering, low STR."
+      "notes": "High Stealth and Tinkering, low STR.",
+      "categories": []
     },
     {
       "id": "wanderer",
@@ -571,7 +589,8 @@
         "Serviceable towel",
         "Marked scroll of magic mapping x6"
       ],
-      "notes": "Well-rounded jack-of-all-trades class."
+      "notes": "Well-rounded jack-of-all-trades class.",
+      "categories": []
     },
     {
       "id": "cleric",
@@ -605,7 +624,8 @@
         "Bubbly potion of healing x2",
         "Torn spellbook of troll's blood"
       ],
-      "notes": "Support/melee hybrid caster."
+      "notes": "Support/melee hybrid caster.",
+      "categories": []
     },
     {
       "id": "merchant",
@@ -641,7 +661,8 @@
         "Slightly-aged cheese",
         "Serviceable pickaxe"
       ],
-      "notes": "Economy-focused class with very high Trading/Lore."
+      "notes": "Economy-focused class with very high Trading/Lore.",
+      "categories": []
     },
     {
       "id": "wizard",
@@ -677,7 +698,8 @@
         "Marked spellbook of cold",
         "Marked spellbook of light"
       ],
-      "notes": "Pure caster with high INT and Sorcery."
+      "notes": "Pure caster with high INT and Sorcery.",
+      "categories": []
     },
     {
       "id": "arcanist",
@@ -713,7 +735,8 @@
         "Serviceable quiver of fire ammo x15",
         "Spell: Windgate"
       ],
-      "notes": "Caster/tinkerer hybrid."
+      "notes": "Caster/tinkerer hybrid.",
+      "categories": []
     },
     {
       "id": "joker",
@@ -752,7 +775,8 @@
         "Brand-new scroll of food",
         "Flawless Luckstone"
       ],
-      "notes": "Jack-of-all-trades with many low-level skills."
+      "notes": "Jack-of-all-trades with many low-level skills.",
+      "categories": []
     },
     {
       "id": "sexton",
@@ -789,7 +813,8 @@
         "Slightly-aged bread",
         "Slightly-aged tomalley"
       ],
-      "notes": "Stealthy support caster."
+      "notes": "Stealthy support caster.",
+      "categories": []
     },
     {
       "id": "ninja",
@@ -823,7 +848,8 @@
         "Bubbly potion of invisibility",
         "Marked scroll of teleportation x3"
       ],
-      "notes": "High DEX/Stealth/Swords melee-stealth hybrid."
+      "notes": "High DEX/Stealth/Swords melee-stealth hybrid.",
+      "categories": []
     },
     {
       "id": "monk",
@@ -854,7 +880,8 @@
         "Worn torch",
         "Bubbly potion of polymorph x2"
       ],
-      "notes": "High CON, specializes in unarmed combat."
+      "notes": "High CON, specializes in unarmed combat.",
+      "categories": []
     },
     {
       "id": "conjurer",
@@ -886,7 +913,8 @@
         "Bubbly potion of restore magic",
         "Torn spellbook of poison"
       ],
-      "notes": "Support/summon-oriented caster."
+      "notes": "Support/summon-oriented caster.",
+      "categories": []
     },
     {
       "id": "accursed",
@@ -921,7 +949,8 @@
         "Fresh vial of blood x3",
         "Faded spellbook of invisibility"
       ],
-      "notes": "Extreme glass-cannon caster class."
+      "notes": "Extreme glass-cannon caster class.",
+      "categories": []
     },
     {
       "id": "mesmer",
@@ -957,7 +986,8 @@
         "Bubbly potion of confusion x3",
         "Torn spellbook of charm monster"
       ],
-      "notes": "Charisma-focused support/summoner build."
+      "notes": "Charisma-focused support/summoner build.",
+      "categories": []
     },
     {
       "id": "brewer",
@@ -997,7 +1027,8 @@
         "Bubbly potion of blindness x2",
         "Bubbly potion of speed"
       ],
-      "notes": "High Alchemy specialist class."
+      "notes": "High Alchemy specialist class.",
+      "categories": []
     },
     {
       "id": "mechanist",
@@ -1035,7 +1066,8 @@
         "Decrepit magic scrap x8",
         "Decrepit metal scrap x16"
       ],
-      "notes": "Tinkering specialist class."
+      "notes": "Tinkering specialist class.",
+      "categories": []
     },
     {
       "id": "punisher",
@@ -1066,7 +1098,8 @@
         "Spell: Teleport Other",
         "Spell: Inner Demon"
       ],
-      "notes": "Balanced hybrid caster/fighter."
+      "notes": "Balanced hybrid caster/fighter.",
+      "categories": []
     },
     {
       "id": "shaman",
@@ -1101,7 +1134,8 @@
         "Spell: Troll Form",
         "Spell: Imp Form"
       ],
-      "notes": "Mysticism-focused caster with unique polymorph-style transformation mechanic."
+      "notes": "Mysticism-focused caster with unique polymorph-style transformation mechanic.",
+      "categories": []
     },
     {
       "id": "hunter",
@@ -1142,7 +1176,8 @@
         "Fresh meat",
         "Fresh fish"
       ],
-      "notes": "Ranged combat specialist."
+      "notes": "Ranged combat specialist.",
+      "categories": []
     },
     {
       "id": "bard",
@@ -1180,7 +1215,8 @@
         "Bubbly potion of restore magic",
         "Fresh fish x2"
       ],
-      "notes": "Charisma/Lore-focused hybrid class."
+      "notes": "Charisma/Lore-focused hybrid class.",
+      "categories": []
     },
     {
       "id": "sapper",
@@ -1220,7 +1256,8 @@
         "Mouldy bread",
         "Spell: Booby Trap"
       ],
-      "notes": "Mace/Alchemy specialist, fragile but hard-hitting."
+      "notes": "Mace/Alchemy specialist, fragile but hard-hitting.",
+      "categories": []
     },
     {
       "id": "scion",
@@ -1260,7 +1297,8 @@
         "Spell: Telekinesis",
         "Spell: Blessed Meals"
       ],
-      "notes": "Broad caster specializing in Sorcery, Mysticism, and Thaumaturgy simultaneously."
+      "notes": "Broad caster specializing in Sorcery, Mysticism, and Thaumaturgy simultaneously.",
+      "categories": []
     },
     {
       "id": "hermit",
@@ -1300,7 +1338,8 @@
         "Spell: Project Spirit",
         "Spell: Deep Shade"
       ],
-      "notes": "Reclusive caster/support hybrid."
+      "notes": "Reclusive caster/support hybrid.",
+      "categories": []
     },
     {
       "id": "paladin",
@@ -1332,7 +1371,8 @@
         "Slightly-aged bread x3",
         "Spell: Divine Zeal"
       ],
-      "notes": "Melee/support hybrid, high Swords skill."
+      "notes": "Melee/support hybrid, high Swords skill.",
+      "categories": []
     }
   ]
 }

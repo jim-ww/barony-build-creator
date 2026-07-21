@@ -50,8 +50,18 @@
           <!-- Race selection -->
           <section>
             <h2 class="text-xl font-semibold mb-3">Race</h2>
+            <div class="flex gap-2 mb-3 flex-wrap">
+              <template x-for="tab in raceTabs" :key="tab">
+                <button
+                  @click="activeRaceTab = tab"
+                  class="px-3 py-1 rounded-full text-xs font-medium border transition"
+                  :class="activeRaceTab === tab ? 'border-emerald-500 bg-emerald-500/10 text-emerald-400' : 'border-zinc-800 text-zinc-400 hover:border-zinc-600'"
+                  x-text="tab"
+                ></button>
+              </template>
+            </div>
             <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-3">
-              <template x-for="race in races" :key="race.id">
+              <template x-for="race in filteredRaces" :key="race.id">
                 <button
                   @click="selectRace(race.id)"
                   class="flex flex-col items-center gap-1 p-2 rounded-lg border-2 transition"
@@ -67,8 +77,18 @@
           <!-- Class selection -->
           <section>
             <h2 class="text-xl font-semibold mb-3">Class</h2>
+            <div class="flex gap-2 mb-3 flex-wrap">
+              <template x-for="tab in classTabs" :key="tab">
+                <button
+                  @click="activeClassTab = tab"
+                  class="px-3 py-1 rounded-full text-xs font-medium border transition"
+                  :class="activeClassTab === tab ? 'border-emerald-500 bg-emerald-500/10 text-emerald-400' : 'border-zinc-800 text-zinc-400 hover:border-zinc-600'"
+                  x-text="tab"
+                ></button>
+              </template>
+            </div>
             <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-9 gap-3">
-              <template x-for="cls in classes" :key="cls.id">
+              <template x-for="cls in filteredClasses" :key="cls.id">
                 <button
                   @click="selectClass(cls.id)"
                   class="flex flex-col items-center gap-1 p-2 rounded-lg border-2 transition"
