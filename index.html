@@ -32,6 +32,14 @@
             Save Build
           </button>
           <button
+            @click="publishBuild()"
+            :disabled="(!selectedRaceId && !selectedClassId) || publishing"
+            class="px-4 py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 disabled:bg-zinc-800/50 disabled:text-zinc-600 disabled:cursor-not-allowed text-sm font-medium transition"
+          >
+            <span x-show="!publishing">Publish</span>
+            <span x-show="publishing">Publishing…</span>
+          </button>
+          <button
             @click="shareUrl()"
             :disabled="!selectedRaceId && !selectedClassId"
             class="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 disabled:bg-zinc-700 disabled:text-zinc-500 disabled:cursor-not-allowed text-sm font-medium transition"
@@ -63,6 +71,13 @@
           maxlength="140"
           class="bg-transparent border-b border-zinc-800 focus:border-zinc-600 outline-none text-sm text-zinc-300 placeholder-zinc-600 py-1 flex-1"
         />
+        <input
+          type="text"
+          x-model="buildTags"
+          placeholder="Tags, comma separated (optional)"
+          maxlength="100"
+          class="bg-transparent border-b border-zinc-800 focus:border-zinc-600 outline-none text-sm text-zinc-300 placeholder-zinc-600 py-1 sm:w-56"
+        />
       </div>
 
       <div class="flex gap-8 items-start">
@@ -79,25 +94,42 @@
             placeholder="Search…"
             class="w-full mb-2 bg-transparent border-b border-zinc-800 focus:border-zinc-600 outline-none text-xs text-zinc-300 placeholder-zinc-600 py-1"
           />
+          <div x-show="allSavedTags.length > 0" class="flex flex-wrap gap-1 mb-2">
+            <template x-for="tag in allSavedTags" :key="tag">
+              <button
+                @click="toggleTagFilter(tag)"
+                class="px-2 py-0.5 rounded-full text-[10px] border transition"
+                :class="activeTagFilter === tag ? 'border-emerald-500 bg-emerald-500/10 text-emerald-400' : 'border-zinc-800 text-zinc-500 hover:border-zinc-600'"
+                x-text="tag"
+              ></button>
+            </template>
+          </div>
           <template x-if="savedBuilds.length > 0 && filteredSavedBuilds.length === 0">
             <p class="text-xs text-zinc-600">No matches.</p>
           </template>
           <ul class="space-y-1">
             <template x-for="build in filteredSavedBuilds" :key="build.id">
-              <li class="group flex items-center gap-1">
-                <button
-                  @click="loadBuild(build)"
-                  class="flex-1 text-left text-xs px-2 py-1.5 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900 transition truncate"
-                  :title="`${build.name} — ${raceName(build.race)} / ${className(build.class)}`"
-                  x-text="build.name"
-                ></button>
-                <button
-                  @click.stop="deleteBuild(build.id)"
-                  class="opacity-0 group-hover:opacity-100 text-zinc-600 hover:text-rose-400 text-xs px-1 transition"
-                  title="Delete"
-                >
-                  ✕
-                </button>
+              <li class="group">
+                <div class="flex items-center gap-1">
+                  <button
+                    @click="loadBuild(build)"
+                    class="flex-1 text-left text-xs px-2 py-1.5 rounded-md text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900 transition truncate"
+                    :title="`${build.name} — ${raceName(build.race)} / ${className(build.class)}`"
+                    x-text="build.name"
+                  ></button>
+                  <button
+                    @click.stop="deleteBuild(build.id)"
+                    class="opacity-0 group-hover:opacity-100 text-zinc-600 hover:text-rose-400 text-xs px-1 transition"
+                    title="Delete"
+                  >
+                    ✕
+                  </button>
+                </div>
+                <div x-show="(build.tags || []).length > 0" class="flex flex-wrap gap-1 px-2 pb-1">
+                  <template x-for="tag in build.tags" :key="tag">
+                    <span class="text-[10px] text-zinc-600" x-text="'#' + tag"></span>
+                  </template>
+                </div>
               </li>
             </template>
           </ul>
@@ -217,6 +249,62 @@
                 <li x-text="item"></li>
               </template>
             </ul>
+          </section>
+
+          <!-- Community builds -->
+          <section>
+            <h2 class="text-xl font-semibold mb-3">Community Builds</h2>
+            <div class="flex flex-col sm:flex-row gap-2 mb-3">
+              <input
+                type="text"
+                x-model="communitySearch"
+                placeholder="Search community builds…"
+                class="bg-transparent border-b border-zinc-800 focus:border-zinc-600 outline-none text-sm text-zinc-300 placeholder-zinc-600 py-1 sm:w-64"
+              />
+              <div x-show="allPublishedTags.length > 0" class="flex flex-wrap gap-1 items-center">
+                <template x-for="tag in allPublishedTags" :key="tag">
+                  <button
+                    @click="toggleCommunityTagFilter(tag)"
+                    class="px-2 py-0.5 rounded-full text-[10px] border transition"
+                    :class="activeCommunityTagFilter === tag ? 'border-emerald-500 bg-emerald-500/10 text-emerald-400' : 'border-zinc-800 text-zinc-500 hover:border-zinc-600'"
+                    x-text="tag"
+                  ></button>
+                </template>
+              </div>
+            </div>
+            <template x-if="publishedBuilds.length === 0">
+              <p class="text-zinc-500 text-sm">No community builds published yet. Be the first!</p>
+            </template>
+            <template x-if="publishedBuilds.length > 0 && filteredPublishedBuilds.length === 0">
+              <p class="text-zinc-500 text-sm">No matches.</p>
+            </template>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              <template x-for="build in filteredPublishedBuilds" :key="build.id">
+                <div class="relative group">
+                  <button
+                    @click="loadBuild(build)"
+                    class="w-full text-left bg-zinc-900 rounded-xl p-4 border border-zinc-800 hover:border-zinc-600 transition"
+                  >
+                    <p class="text-sm font-medium truncate pr-4" x-text="build.name"></p>
+                    <p class="text-xs text-zinc-500 mt-0.5" x-text="`${raceName(build.race)} / ${className(build.class)}`"></p>
+                    <p x-show="build.description" class="text-xs text-zinc-400 mt-2 line-clamp-2" x-text="build.description"></p>
+                    <div x-show="(build.tags || []).length > 0" class="flex flex-wrap gap-1 mt-2">
+                      <template x-for="tag in build.tags" :key="tag">
+                        <span class="text-[10px] text-zinc-600" x-text="'#' + tag"></span>
+                      </template>
+                    </div>
+                  </button>
+                  <button
+                    x-show="isMine(build)"
+                    @click.stop="deletePublishedBuild(build)"
+                    class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 text-zinc-600 hover:text-rose-400 text-xs transition"
+                    title="Delete your published build"
+                  >
+                    ✕
+                  </button>
+                </div>
+              </template>
+            </div>
           </section>
         </div>
       </template>
