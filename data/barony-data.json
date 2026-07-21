@@ -15,7 +15,7 @@
 			"buffs": ["12.5% faster swimming", "Welcomed by shopkeepers"],
 			"debuffs": [],
 			"notes": "Baseline, well-rounded race with no combat resistances/weaknesses. Available since the base game; other races were added by later DLCs.",
-			"categories": [""]
+			"categories": ["Universal"]
 		},
 		{
 			"id": "skeleton",
@@ -43,7 +43,7 @@
 			],
 			"notes": "Requires Myths and Outcasts DLC. Numeric stat modifiers not listed on wiki.",
 			"dlc": "Myths and Outcasts",
-			"categories": []
+			"categories": ["Ranged", "Melee"]
 		},
 		{
 			"id": "automaton",
@@ -74,7 +74,7 @@
 			],
 			"notes": "Requires Legends and Pariahs DLC. Numeric stat modifiers not listed on wiki.",
 			"dlc": "Legends and Pariahs",
-			"categories": []
+			"categories": ["Magic", "Universal"]
 		},
 		{
 			"id": "dryad",
@@ -103,7 +103,7 @@
 			],
 			"notes": "Requires Deserters & Disciples DLC. Numeric stat modifiers not listed on wiki.",
 			"dlc": "Deserters & Disciples",
-			"categories": []
+			"categories": ["Magic"]
 		},
 		{
 			"id": "gnome",
@@ -130,7 +130,7 @@
 			"debuffs": ["20% reduced STR growth", "Weak to Magic 10%, Ranged 10%"],
 			"notes": "Requires Deserters & Disciples DLC.",
 			"dlc": "Deserters & Disciples",
-			"categories": []
+			"categories": ["Magic"]
 		},
 		{
 			"id": "goatman",
@@ -162,7 +162,7 @@
 			],
 			"notes": "Requires Myths and Outcasts DLC. Stat modifiers are conditional (drunk/hungover), not a flat starting bonus.",
 			"dlc": "Myths and Outcasts",
-			"categories": []
+			"categories": ["Melee", "Universal"]
 		},
 		{
 			"id": "goblin",
@@ -191,7 +191,7 @@
 			],
 			"notes": "Requires Legends and Pariahs DLC. Numeric stat modifiers not listed on wiki.",
 			"dlc": "Legends and Pariahs",
-			"categories": []
+			"categories": ["Melee"]
 		},
 		{
 			"id": "gremlin",
@@ -220,7 +220,7 @@
 			],
 			"notes": "Requires Deserters & Disciples DLC.",
 			"dlc": "Deserters & Disciples",
-			"categories": []
+			"categories": ["Universal"]
 		},
 		{
 			"id": "incubus",
@@ -249,7 +249,7 @@
 			],
 			"notes": "Requires Legends and Pariahs DLC. Male-only; selecting female switches to Succubus (if Myths and Outcasts owned) or Human.",
 			"dlc": "Legends and Pariahs",
-			"categories": []
+			"categories": ["Ranged", "Universal"]
 		},
 		{
 			"id": "insectoid",
@@ -282,7 +282,7 @@
 			],
 			"notes": "Requires Legends and Pariahs DLC.",
 			"dlc": "Legends and Pariahs",
-			"categories": []
+			"categories": ["Ranged", "Universal"]
 		},
 		{
 			"id": "myconid",
@@ -310,7 +310,7 @@
 			],
 			"notes": "Requires Deserters & Disciples DLC.",
 			"dlc": "Deserters & Disciples",
-			"categories": []
+			"categories": ["Melee", "Universal"]
 		},
 		{
 			"id": "salamander",
@@ -339,7 +339,7 @@
 			],
 			"notes": "Requires Deserters & Disciples DLC.",
 			"dlc": "Deserters & Disciples",
-			"categories": []
+			"categories": ["Melee", "Magic", "Universal"]
 		},
 		{
 			"id": "succubus",
@@ -368,7 +368,7 @@
 			],
 			"notes": "Requires Myths and Outcasts DLC. Female-only; toggling male switches to Incubus if Legends and Pariahs is owned.",
 			"dlc": "Myths and Outcasts",
-			"categories": []
+			"categories": ["Universal"]
 		},
 		{
 			"id": "vampire",
@@ -396,7 +396,7 @@
 			],
 			"notes": "Requires Myths and Outcasts DLC. Numeric stat modifiers not listed on wiki.",
 			"dlc": "Myths and Outcasts",
-			"categories": []
+			"categories": ["Melee", "Magic"]
 		}
 	],
 	"classes": [
@@ -433,7 +433,7 @@
 				"Decrepit bronze tomahawk x2"
 			],
 			"notes": "Melee-focused starter class, high STR/Axes.",
-			"categories": []
+			"categories": ["Melee"]
 		},
 		{
 			"id": "warrior",
@@ -467,7 +467,7 @@
 				"Slightly-aged fish"
 			],
 			"notes": "Balanced melee/leadership class.",
-			"categories": []
+			"categories": ["Melee"]
 		},
 		{
 			"id": "healer",
@@ -505,7 +505,7 @@
 				"Brand-new spellbook of healing"
 			],
 			"notes": "Support caster with high Thaumaturgy.",
-			"categories": []
+			"categories": ["Magic"]
 		},
 		{
 			"id": "rogue",
@@ -542,7 +542,7 @@
 				"Serviceable quiver of springshot ammo"
 			],
 			"notes": "High Stealth and Tinkering, low STR.",
-			"categories": []
+			"categories": ["Ranged"]
 		},
 		{
 			"id": "wanderer",
@@ -584,7 +584,7 @@
 				"Marked scroll of magic mapping x6"
 			],
 			"notes": "Well-rounded jack-of-all-trades class.",
-			"categories": []
+			"categories": ["Universal"]
 		},
 		{
 			"id": "cleric",
@@ -619,7 +619,7 @@
 				"Torn spellbook of troll's blood"
 			],
 			"notes": "Support/melee hybrid caster.",
-			"categories": []
+			"categories": ["Universal", "Magic"]
 		},
 		{
 			"id": "merchant",
@@ -656,7 +656,7 @@
 				"Serviceable pickaxe"
 			],
 			"notes": "Economy-focused class with very high Trading/Lore.",
-			"categories": []
+			"categories": ["Universal"]
 		},
 		{
 			"id": "wizard",
@@ -693,7 +693,7 @@
 				"Marked spellbook of light"
 			],
 			"notes": "Pure caster with high INT and Sorcery.",
-			"categories": []
+			"categories": ["Magic"]
 		},
 		{
 			"id": "arcanist",
@@ -730,7 +730,7 @@
 				"Spell: Windgate"
 			],
 			"notes": "Caster/tinkerer hybrid.",
-			"categories": []
+			"categories": ["Magic", "Ranged"]
 		},
 		{
 			"id": "joker",
@@ -770,7 +770,7 @@
 				"Flawless Luckstone"
 			],
 			"notes": "Jack-of-all-trades with many low-level skills.",
-			"categories": []
+			"categories": ["Universal"]
 		},
 		{
 			"id": "sexton",
@@ -808,7 +808,7 @@
 				"Slightly-aged tomalley"
 			],
 			"notes": "Stealthy support caster.",
-			"categories": []
+			"categories": ["Ranged", "Magic"]
 		},
 		{
 			"id": "ninja",
@@ -843,7 +843,7 @@
 				"Marked scroll of teleportation x3"
 			],
 			"notes": "High DEX/Stealth/Swords melee-stealth hybrid.",
-			"categories": []
+			"categories": ["Melee", "Ranged"]
 		},
 		{
 			"id": "monk",
@@ -875,7 +875,7 @@
 				"Bubbly potion of polymorph x2"
 			],
 			"notes": "High CON, specializes in unarmed combat.",
-			"categories": []
+			"categories": ["Melee"]
 		},
 		{
 			"id": "conjurer",
@@ -908,7 +908,7 @@
 				"Torn spellbook of poison"
 			],
 			"notes": "Support/summon-oriented caster.",
-			"categories": []
+			"categories": ["Magic"]
 		},
 		{
 			"id": "accursed",
@@ -940,7 +940,7 @@
 				"Faded spellbook of invisibility"
 			],
 			"notes": "Extreme glass-cannon caster class.",
-			"categories": []
+			"categories": ["Melee", "Magic"]
 		},
 		{
 			"id": "mesmer",
@@ -975,7 +975,7 @@
 				"Torn spellbook of charm monster"
 			],
 			"notes": "Charisma-focused support/summoner build.",
-			"categories": []
+			"categories": ["Magic"]
 		},
 		{
 			"id": "brewer",
@@ -1016,7 +1016,7 @@
 				"Bubbly potion of speed"
 			],
 			"notes": "High Alchemy specialist class.",
-			"categories": []
+			"categories": ["Specialized"]
 		},
 		{
 			"id": "mechanist",
@@ -1053,7 +1053,7 @@
 				"Decrepit metal scrap x16"
 			],
 			"notes": "Tinkering specialist class.",
-			"categories": []
+			"categories": ["Specialized"]
 		},
 		{
 			"id": "punisher",
@@ -1085,7 +1085,7 @@
 				"Spell: Inner Demon"
 			],
 			"notes": "Balanced hybrid caster/fighter.",
-			"categories": []
+			"categories": ["Universal"]
 		},
 		{
 			"id": "shaman",
@@ -1121,7 +1121,7 @@
 				"Spell: Imp Form"
 			],
 			"notes": "Mysticism-focused caster with unique polymorph-style transformation mechanic.",
-			"categories": []
+			"categories": ["Magic", "Universal", "Melee"]
 		},
 		{
 			"id": "hunter",
@@ -1159,7 +1159,7 @@
 				"Fresh fish"
 			],
 			"notes": "Ranged combat specialist.",
-			"categories": []
+			"categories": ["Ranged"]
 		},
 		{
 			"id": "bard",
@@ -1194,7 +1194,7 @@
 				"Fresh fish x2"
 			],
 			"notes": "Charisma/Lore-focused hybrid class.",
-			"categories": []
+			"categories": ["Melee"]
 		},
 		{
 			"id": "sapper",
@@ -1233,7 +1233,7 @@
 				"Spell: Booby Trap"
 			],
 			"notes": "Mace/Alchemy specialist, fragile but hard-hitting.",
-			"categories": []
+			"categories": ["Melee", "Specialized"]
 		},
 		{
 			"id": "scion",
@@ -1270,7 +1270,7 @@
 				"Spell: Blessed Meals"
 			],
 			"notes": "Broad caster specializing in Sorcery, Mysticism, and Thaumaturgy simultaneously.",
-			"categories": []
+			"categories": ["Magic"]
 		},
 		{
 			"id": "hermit",
@@ -1309,7 +1309,7 @@
 				"Spell: Deep Shade"
 			],
 			"notes": "Reclusive caster/support hybrid.",
-			"categories": []
+			"categories": ["Magic", "Melee"]
 		},
 		{
 			"id": "paladin",
@@ -1342,7 +1342,7 @@
 				"Spell: Divine Zeal"
 			],
 			"notes": "Melee/support hybrid, high Swords skill.",
-			"categories": []
+			"categories": ["Melee"]
 		}
 	]
 }
